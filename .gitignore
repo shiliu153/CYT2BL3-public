@@ -1,0 +1,39 @@
+# ============================ IAR 构建产物 ============================
+# Debug_m4/ 是 IAR 的完整输出目录（BrowseInfo/Obj/Exe/List），单次构建可达数百 MB。
+# 其中的 .ninja_* 与 browse 数据库含本机绝对路径，绝不应入库。
+project/iar/Debug_m4/
+project/iar/Debug_m0/
+project/iar/Debug/
+project/iar/Release/
+
+*.o
+*.out
+*.hex
+*.map
+*.pbi
+*.pbi.dep
+*.pbd
+*.pbw
+*.ninja_deps
+*.ninja_log
+*.cyt2bl3_build_cache
+
+# ==================== IAR 个人会话状态（含本机绝对路径） ====================
+# 这两个目录由 IAR 在打开工程时自动重建，且内容与具体机器绑定。
+# 工程自带的 project/iar/删除临时文件IAR.bat 也把它们列为临时文件。
+project/iar/settings/
+project/iar/project_config/settings/
+
+# ============================== 内部材料 ==============================
+# 个人讲解稿与变量速查表，不属于开源内容。
+project/doc/
+
+# ============================ 编辑器 / 系统 ============================
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+
+# ============================== Python ==============================
+__pycache__/
+*.pyc
